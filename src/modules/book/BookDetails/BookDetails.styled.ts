@@ -1,8 +1,3 @@
-// import styled from 'styled-components';
-
-// export const BookDetailsWrapper = styled.div`
-// `;
-
 import styled from 'styled-components';
 
 export const BookDetailsWrapper = styled.div`

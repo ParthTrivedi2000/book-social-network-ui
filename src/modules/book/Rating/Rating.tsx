@@ -1,18 +1,3 @@
-// import React, { FC } from 'react';
-// import { RatingWrapper } from './Rating.styled';
-
-// interface RatingProps {}
-
-// const Rating: FC<RatingProps> = () => (
-//  <RatingWrapper data-testid="Rating">
-//     Rating Component
-//  </RatingWrapper>
-// );
-
-// export default Rating;
-
-// 2nd version
-
 import React from 'react';
 import {RatingContainer, HalfStar, Star} from './Rating.styled';
 

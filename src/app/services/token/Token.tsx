@@ -1,25 +1,4 @@
-// // TokenService.ts
-// export class Token {
-//     static token: string | null = null;
-  
-//     static getToken() {
-//       return this.token;
-//     }
-  
-//     static setToken(token: string) {
-//       this.token = token;
-//     }
-  
-//     static clearToken() {
-//       this.token = null;
-//     }
-//   }
-
-// Token.tsx
-// Token.tsx
-// Token.tsx
 import { jwtDecode } from 'jwt-decode';  // Correct import for jwt-decode
-import { VoidExpression } from 'typescript';
 
 class TokenService {
   // Set token in localStorage

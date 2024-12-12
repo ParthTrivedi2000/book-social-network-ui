@@ -1,8 +1,3 @@
-// import styled from 'styled-components';
-
-// export const BorrowedBookListWrapper = styled.div`
-// `;
-
 import styled from 'styled-components';
 
 export const Container = styled.div`

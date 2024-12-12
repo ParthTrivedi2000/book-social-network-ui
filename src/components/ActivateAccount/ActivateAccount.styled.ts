@@ -1,10 +1,3 @@
-// import styled from 'styled-components';
-
-// export const ActivateAccountWrapper = styled.div`
-// `;
-
-// 2nd version
-
 import styled from 'styled-components';
 
 export const Container = styled.div`

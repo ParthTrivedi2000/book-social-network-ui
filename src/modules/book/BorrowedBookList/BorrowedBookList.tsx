@@ -1,44 +1,7 @@
-// import React, { FC } from 'react';
-// import { BorrowedBookListWrapper } from './BorrowedBookList.styled';
-
-// interface BorrowedBookListProps {}
-
-// const BorrowedBookList: FC<BorrowedBookListProps> = () => (
-//  <BorrowedBookListWrapper data-testid="BorrowedBookList">
-//     BorrowedBookList Component
-//  </BorrowedBookListWrapper>
-// );
-
-// export default BorrowedBookList;
-
-// 2nd Version:-
-
 import React, { useEffect, useState } from 'react';
 import { BookService, FeedbackRequest, PageResponseBorrowedBookResponse, BorrowedBookResponse } from '../../../app/services';
 import { FeedbackService } from '../../../app/services';
 import { Container, Table, Pagination, Button, Form, FormGroup, Label, TextArea, RangeInput } from './BorrowedBookList.styled';  // Assuming you've styled your components
-
-// // Assuming the types from your service response
-// interface BorrowedBookResponse {
-//   id: number;
-//   title: string;
-//   authorName: string;
-//   isbn: string;
-//   rate: number;
-//   returned: boolean;
-//   returnApproved: boolean;
-// }
-
-// interface FeedbackRequest {
-//   bookId: number;
-//   comment: string;
-//   note: number;
-// }
-
-// interface PageResponseBorrowedBookResponse {
-//   content?: BorrowedBookResponse[];
-//   totalPages: number;
-// }
 
 const BorrowedBookList = () => {
   const [borrowedBooks, setBorrowedBooks] = useState<PageResponseBorrowedBookResponse>({ totalPages: 0 });

@@ -1,21 +1,33 @@
-// File: AuthGuard.tsx
-
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from './useAuth';
+import { Spinner, SpinnerContainer } from './AuthGuard.styled'; // Import the styled components
+
 
 interface AuthGuardProps {
-  children: React.ReactNode;  // Ensure the correct type for children
+  children: ReactNode;  // Ensure the correct type for children
 }
 
 const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
-  const { isAuthenticated } = useAuth();  // Check authentication status
+  const { isAuthenticated, loading } = useAuth(); // Get authentication status and loading
 
-  if (!isAuthenticated) {
-    return <Navigate to="/login" />;  // Redirect to login if not authenticated
+  // If loading is true, don't render anything yet
+  if (loading) {
+    // return null; // Or a loading spinner, etc.
+    return (
+      <SpinnerContainer>
+        <Spinner />
+      </SpinnerContainer>
+    );
   }
 
-  return <>{children}</>;  // Render the protected route if authenticated
+  // Redirect if not authenticated
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
+
+  // Otherwise, render the protected children
+  return <>{children}</>;
 };
 
 export default AuthGuard;

@@ -1,23 +1,5 @@
-// import React, { FC } from 'react';
-// import { ReturnedBooksWrapper } from './ReturnedBooks.styled';
-
-// interface ReturnedBooksProps {}
-
-// const ReturnedBooks: FC<ReturnedBooksProps> = () => (
-//  <ReturnedBooksWrapper data-testid="ReturnedBooks">
-//     ReturnedBooks Component
-//  </ReturnedBooksWrapper>
-// );
-
-// export default ReturnedBooks;
-
-
-// 2nd Version:-
-
-import React, { useState, useEffect } from 'react';
-// import { BookService } from '../../app/services/services/BookService'; // Update the import as needed
+import { useState, useEffect } from 'react';
 import { BookService } from '../../../app/services';
-// import { PageResponseBorrowedBookResponse, BorrowedBookResponse } from '../../app/services/models'; // Update the models import as needed
 import { PageResponseBorrowedBookResponse, BorrowedBookResponse } from '../../../app/services';
 import { Container, Table, Pagination } from './ReturnedBooks.styled';
 

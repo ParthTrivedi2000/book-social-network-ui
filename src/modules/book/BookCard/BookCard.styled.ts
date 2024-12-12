@@ -1,9 +1,3 @@
-// import styled from 'styled-components';
-
-// export const BookCardWrapper = styled.div`
-// `;
-
-
 import styled from 'styled-components';
 
 export const Card = styled.div`

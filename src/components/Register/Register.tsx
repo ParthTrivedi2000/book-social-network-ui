@@ -1,31 +1,8 @@
-// import React, { FC } from 'react';
-// import { RegisterWrapper } from './Register.styled';
-
-// interface RegisterProps {}
-
-// const Register: FC<RegisterProps> = () => (
-//  <RegisterWrapper data-testid="Register">
-//     Register Component
-//  </RegisterWrapper>
-// );
-
-// export default Register;
-
-
-
-// 2nd version :-
-// Register.tsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // for navigation
 import axios, { AxiosError } from 'axios'; // Assuming you're using axios for HTTP requests
+import interceptorInstance from '../../app/services/interceptor/interceptor';
 import { RegistrationRequest } from '../../app/services';
-
-// interface RegistrationRequest {
-//   email: string;
-//   firstname: string;
-//   lastname: string;
-//   password: string;
-// }
 
 const Register = () => {
   const [registerRequest, setRegisterRequest] = useState<RegistrationRequest>({
@@ -46,7 +23,7 @@ const Register = () => {
     setErrorMsg([]); // Clear previous errors
 
     try {
-      const response = await axios.post('/api/v1/auth/register', registerRequest); // Replace with your API endpoint
+      const response = await interceptorInstance.post('auth/register', registerRequest); // Replace with your API endpoint
       navigate('/login'); // Redirect to login after successful registration
     } catch (err: unknown) {
       if(axios.isAxiosError(err)) {

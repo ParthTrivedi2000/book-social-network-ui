@@ -1,23 +1,7 @@
-// import React, { FC } from 'react';
-// import { ActivateAccountWrapper } from './ActivateAccount.styled';
-
-// interface ActivateAccountProps {}
-
-// const ActivateAccount: FC<ActivateAccountProps> = () => (
-//  <ActivateAccountWrapper data-testid="ActivateAccount">
-//     ActivateAccount Component
-//  </ActivateAccountWrapper>
-// );
-
-// export default ActivateAccount;
-
-
-// 2nd version:-
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation
 import {AuthenticationService} from '../../app/services/services/AuthenticationService';
-import CodeInput from 'react-code-input'; // Assuming you have a CodeInput component
+import CodeInput from 'react-code-input';
 import { Container, ActivationMessage, ActivationError, Button, CodeForm } from './ActivateAccount.styled';
 
 const ActivateAccount = () => {
@@ -47,11 +31,6 @@ const ActivateAccount = () => {
   const redirectToLogin = () => {
     navigate('/login');
   };
-
-//   // Handler when code is completed (onCodeCompleted)
-//   const onCodeCompleted = (token: string) => {
-//     confirmAccount(token);
-//   };
 
   // Handler for changes in the code input fields
   const handleCodeChange = (newCode: string) => {
@@ -83,10 +62,6 @@ const ActivateAccount = () => {
         <CodeForm>
           <h2>Type your activation code</h2>
           <CodeInput
-            // isHidden={false}
-            // codeLength={6}
-            // code="number"
-            // onCodeCompleted={onCodeCompleted}
             value={code} // Bind the input value to the state
             onChange={handleCodeChange} // Trigger onChange to capture code
             type="number" // Set the input type to "number"

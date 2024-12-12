@@ -1,8 +1,3 @@
-// import styled from 'styled-components';
-
-// export const RatingWrapper = styled.div`
-// `;
-
 import styled from 'styled-components';
 
 export const RatingContainer = styled.div`

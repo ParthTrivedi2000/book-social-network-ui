@@ -19,13 +19,13 @@ const BookModule: React.FC = () => {
       {/* The main route for BookModule */}
       <Route path="/" element={<Main />}>
         {/* Protected routes wrapped inside AuthGuard */}
-        <Route element={<AuthGuard children={undefined} />}>
+        <Route element={<AuthGuard children={undefined}/>}>
           <Route path="book-list" element={<BookList />} />
           <Route path="my-books" element={<MyBooks />} />
           <Route path="my-borrowed-books" element={<BorrowedBookList />} />
           <Route path="my-returned-books" element={<ReturnedBooks />} />
           <Route path="details/:bookId" element={<BookDetails />} />
-          <Route path="manage" element={<ManageBook />} />
+          <Route path="books/manage" element={<ManageBook />} />
           <Route path="manage/:bookId" element={<ManageBook />} />
         </Route>
       </Route>

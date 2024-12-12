@@ -1,44 +1,8 @@
-// import React, { FC } from 'react';
-// import { BookDetailsWrapper } from './BookDetails.styled';
-
-// interface BookDetailsProps {}
-
-// const BookDetails: FC<BookDetailsProps> = () => (
-//  <BookDetailsWrapper data-testid="BookDetails">
-//     BookDetails Component
-//  </BookDetailsWrapper>
-// );
-
-// export default BookDetails;
-
-
-// 2nd Version :-
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BookService, FeedbackService, BookResponse, FeedbackResponse, PageResponseFeedbackResponse } from '../../../app/services';
 import { CoverImage,PaginationWrapper,BookDetailsWrapper, BookInfo } from './BookDetails.styled';
-import Rating from '../Rating/Rating'; // Assuming the Rating component is available
-
-// interface BookResponse {
-//   title: string;
-//   authorName: string;
-//   isbn: string;
-//   owner: string;
-//   cover: string;
-//   rate: number;
-//   synopsis: string;
-// }
-
-// interface FeedbackResponse {
-//   note: number;
-//   comment: string;
-// }
-
-// interface PageResponseFeedbackResponse {
-//   content: FeedbackResponse[];
-//   totalPages: number;
-// }
+import Rating from '../Rating/Rating';
 
 const BookDetails: React.FC = () => {
   const { bookId } = useParams<{ bookId: string }>();

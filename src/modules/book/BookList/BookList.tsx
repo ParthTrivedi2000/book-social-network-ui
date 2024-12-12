@@ -1,19 +1,3 @@
-// import React, { FC } from 'react';
-// import { BookListWrapper } from './BookList.styled';
-
-// interface BookListProps {}
-
-// const BookList: FC<BookListProps> = () => (
-//  <BookListWrapper data-testid="BookList">
-//     BookList Component
-//  </BookListWrapper>
-// );
-
-// export default BookList;
-
-
-// 2nd Version
-
 import React, { useState, useEffect } from 'react';
 import {Container, Alert, Pagination, PaginationItem, PaginationList, BookListWrapper} from '../BookList/BookList.styled';
 import { BookService} from '../../../app/services/services/BookService';
@@ -33,23 +17,6 @@ const BookList: React.FC = () => {
   useEffect(() => {
     findAllBooks();
   }, [page]);
-
-//   const findAllBooks = () => {
-//     bookService
-//       .findAllBooks({
-//         page,
-//         size,
-//       })
-//       .then((books) => {
-//         setBookResponse(books);
-//         setPages(Array.from({ length: books.totalPages }, (_, i) => i));
-//       })
-//       .catch((err) => {
-//         console.error(err);
-//         setLevel('error');
-//         setMessage('Error loading books');
-//       });
-//   };
 
 const findAllBooks = async () => {
    try {
@@ -92,9 +59,6 @@ const findAllBooks = async () => {
     if (page > 0) setPage(page - 1);
   };
 
-//   const goToNextPage = () => {
-//     if (page < bookResponse.totalPages - 1) setPage(page + 1);
-//   };
   const goToNextPage = () => setPage(prevPage => (bookResponse.totalPages ? Math.min(bookResponse.totalPages - 1, prevPage + 1) : prevPage));
 
   const goToLastPage = () => {
@@ -103,6 +67,7 @@ const findAllBooks = async () => {
 
   return (
     <Container>
+      <h1>Hello</h1>
       <h3>Books list</h3>
       {message && (
         <Alert level={level}>

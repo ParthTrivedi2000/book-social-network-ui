@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-
-
-// export const LoginWrapper = styled.div`
-// .login-container{
-//     width: 800px !important
-//     margin-top: 15%
-// }
-// `;
-
 export const LoginContainer = styled.div`
   width: 800px !important;
   margin-top: 15%;

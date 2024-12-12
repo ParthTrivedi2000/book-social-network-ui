@@ -1,21 +1,6 @@
-// import React, { FC } from 'react';
-// import { BookCardWrapper } from './BookCard.styled';
-
-// interface BookCardProps {}
-
-// const BookCard: FC<BookCardProps> = () => (
-//  <BookCardWrapper data-testid="BookCard">
-//     BookCard Component
-//  </BookCardWrapper>
-// );
-
-// export default BookCard;
-
-// 2nd version
-
 import React from 'react';
 import { BookResponse } from '../../../app/services';
-import Rating from '../Rating/Rating'; // Assuming you have a Rating component
+import Rating from '../Rating/Rating';
 import { Card, CardBody, CardFooter, CardTitle, CardSubtitle, CardText, Icon, CardImage, ButtonGroup } from '../BookCard/BookCard.styled';
 
 interface BookCardProps {
@@ -27,25 +12,9 @@ interface BookCardProps {
   onBorrow: (book: BookResponse) => void;
   onEdit: (book: BookResponse) => void;
   onShowDetails: (book: BookResponse) => void;
-
-//   onShare = () => {}; // Default to no-op function
-//   onArchive = () => {};
-//   onAddToWaitingList = () => {};
-//   onBorrow = () => {};
-//   onEdit = () => {};
-//   onShowDetails = () => {}
 }
 
 const BookCard: React.FC<BookCardProps> = ({
-//   book,
-//   manage,
-//   onShare,
-//   onArchive,
-//   onAddToWaitingList,
-//   onBorrow,
-//   onEdit,
-//   onShowDetails,
-
   book,
   manage,
   onShare = () => {}, // Default to no-op function

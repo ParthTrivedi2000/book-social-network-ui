@@ -1,18 +1,3 @@
-// import React, { FC } from 'react';
-// import { ManageBookWrapper } from './ManageBook.styled';
-
-// interface ManageBookProps {}
-
-// const ManageBook: FC<ManageBookProps> = () => (
-//  <ManageBookWrapper data-testid="ManageBook">
-//     ManageBook Component
-//  </ManageBookWrapper>
-// );
-
-// export default ManageBook;
-
-// 2nd Version:-
-
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { BookService,BookRequest } from '../../../app/services';

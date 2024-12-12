@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-// export const BookListWrapper = styled.div`
-// `;
-
-// Styled components
 export const Container = styled.div`
   padding: 20px;
 `;
